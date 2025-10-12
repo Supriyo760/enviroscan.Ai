@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 # 🌍 EnviroScan AI 
 
 EnviroScan AI is a proof-of-concept platform that demonstrates the power of machine learning in environmental science. It provides actionable insights into the sources of air pollution by analyzing real-time air quality data, weather patterns, and geospatial information.
