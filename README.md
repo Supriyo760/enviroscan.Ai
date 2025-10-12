@@ -10,7 +10,7 @@ EnviroScan AI is a proof-of-concept platform that demonstrates the power of mach
 # Website URL (Deployment link):
 >>>>>>> 67d8de8 (Added project files to kasani branch)
 
-https://enviroscanapp.streamlit.app/
+https://enviroscanai-kche9zywaakhvqwrcgcezc.streamlit.app/
 
 https://github.com/user-attachments/assets/30c5482f-16c8-4f9c-a8fa-889405bcdefc
 
