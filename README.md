@@ -3,12 +3,7 @@
 
 EnviroScan AI is a proof-of-concept platform that demonstrates the power of machine learning in environmental science. It provides actionable insights into the sources of air pollution by analyzing real-time air quality data, weather patterns, and geospatial information.
 
-*Website URL (Deployment link):*
-=======
-# EnviroScan-AI-Powered-Team-6 
-
 # Website URL (Deployment link):
->>>>>>> 67d8de8 (Added project files to kasani branch)
 
 https://enviroscanai-kche9zywaakhvqwrcgcezc.streamlit.app/
 
@@ -21,7 +16,7 @@ https://github.com/user-attachments/assets/30c5482f-16c8-4f9c-a8fa-889405bcdefc
 
 ## 🚀 Live Demo
 Check out the deployed app here:  
-[EnviroScan AI Web App](https://enviroscanapp.streamlit.app/)
+[EnviroScan AI Web App](https://enviroscanai-kche9zywaakhvqwrcgcezc.streamlit.app/)
 
 ---
 
