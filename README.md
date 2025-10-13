@@ -76,7 +76,7 @@ EnviroScan AI aims to go beyond measuring pollution levels by attributing pollut
 
 ```bash
 # 1. Clone repository
-git clone https://github.com/Kushalp2004/EnviroScan-Project.git
+git clone https://github.com/Supriyo760/enviroscan.Ai
 cd EnviroScan-Project
 
 # 2. Setup environment
@@ -90,12 +90,10 @@ git clone https://github.com/YOUR_USERNAME/YOUR_REPOSITORY_NAME.git
 cd YOUR_REPOSITORY_NAME
 
 :: 2. Setup environment
->>>>>>> 67d8de8 (Added project files to kasani branch)
 python -m venv venv
 venv\Scripts\activate
 pip install -r requirements.txt
 
-<<<<<<< HEAD
 # 3. Add API key
 notepad .env
 # Add this line:
@@ -112,7 +110,7 @@ streamlit run app.py
 
 ```bash
 # 1. Clone repository
-git clone https://github.com/Kushalp2004/EnviroScan-Project.git
+git clone https://github.com/Supriyo760/enviroscan.Ai
 cd EnviroScan-Project
 =======
 :: 3. Add API key
@@ -129,7 +127,6 @@ streamlit run app.py
 # 1. Clone repository
 git clone https://github.com/YOUR_USERNAME/YOUR_REPOSITORY_NAME.git
 cd YOUR_REPOSITORY_NAME
->>>>>>> 67d8de8 (Added project files to kasani branch)
 
 # 2. Setup environment
 python3 -m venv venv
