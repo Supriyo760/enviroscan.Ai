@@ -6,17 +6,17 @@ from pathlib import Path
 st.markdown(
     """
     <style>
-      /* High-specificity target for info blocks */
-      div[data-testid="stInfoBlock"] .stInfo {
+      /* Target Technology Stack info blocks specifically */
+      [data-testid="stInfoBlock"] .stInfo {
         color: #ffffff !important; /* Force white text */
         background-color: #2c3e50 !important; /* Dark card background */
         border: 1px solid #34495e !important; /* Subtle border */
         border-radius: 5px !important; /* Rounded corners */
         padding: 10px !important; /* Padding inside card */
       }
-      /* Ensure text inside info blocks is white */
-      div[data-testid="stInfoBlock"] .stInfo * {
-        color: #ffffff !important; /* White text for all nested elements */
+      /* Ensure all text within info blocks is white */
+      [data-testid="stInfoBlock"] .stInfo, [data-testid="stInfoBlock"] .stInfo p {
+        color: #ffffff !important; /* White text for all content */
       }
     </style>
     """,
