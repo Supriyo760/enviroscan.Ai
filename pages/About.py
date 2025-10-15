@@ -14,6 +14,73 @@ st.set_page_config(
     layout="wide",
 )
 
+# --- GLOBAL BACKGROUND AND STYLES ---
+st.markdown(
+    """
+    <div id="particles-js" style="position: fixed; top: 0; left: 0; width: 100%; height: 100%; z-index: -100;"></div>
+    <style>
+      #particles-js {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: -100;
+        background: linear-gradient(135deg, #1e3a8a, #065f46); /* Deep blue to dark teal */
+        background-size: 200% 200%;
+        animation: gradientAnimation 15s ease infinite;
+      }
+      @keyframes gradientAnimation {
+        0% { background-position: 0% 50%; }
+        50% { background-position: 100% 50%; }
+        100% { background-position: 0% 50%; }
+      }
+      .stApp, [data-testid="stAppViewContainer"] {
+        position: relative;
+        z-index: 10 !important;
+        background: rgba(15, 23, 42, 1.0) !important; /* Dark blue-gray content background */
+        color: #ffffff !important; /* White text for contrast */
+      }
+      [data-testid="stSidebar"] {
+        background: #1e1e1e !important; /* Black sidebar */
+        z-index: 20 !important;
+        color: #ffffff !important; /* White text for contrast */
+        height: 100vh !important; /* Full viewport height */
+        overflow-y: auto !important; /* Vertical scrollbar */
+        overflow-x: hidden !important; /* Prevent horizontal scrollbar */
+        scrollbar-width: thin; /* Slim scrollbar for Firefox */
+        scrollbar-color: #93c5fd #1e293b; /* Blue thumb, dark gray track */
+      }
+      /* Custom scrollbar styling for WebKit browsers (Chrome, Safari, Edge) */
+      [data-testid="stSidebar"]::-webkit-scrollbar {
+        width: 8px;
+      }
+      [data-testid="stSidebar"]::-webkit-scrollbar-track {
+        background: #1e293b; /* Dark gray track */
+      }
+      [data-testid="stSidebar"]::-webkit-scrollbar-thumb {
+        background-color: #93c5fd; /* Blue thumb to match particle links */
+        border-radius: 4px;
+        border: 2px solid #1e293b; /* Dark border for contrast */
+      }
+      .css-1v3fvcr, .css-1lcbmhc, .css-1d391kg {
+        z-index: 15 !important;
+        background: rgba(15, 23, 42, 1.0) !important; /* Match content background */
+        color: #ffffff !important; /* White text */
+      }
+      /* Target Technology Stack text specifically */
+      #tech-stack-text {
+        color: #ffffff !important; /* Ensure white text for visibility */
+        font-weight: bold;
+      }
+      .stInfo {
+        color: #ffffff !important; /* Apply to info blocks in Technology Stack */
+      }
+    </style>
+    """,
+    unsafe_allow_html=True
+)
+
 # --- HELPER FUNCTION TO READ & ENCODE IMAGE ---
 def img_to_bytes(img_path):
     img_bytes = Path(img_path).read_bytes()
