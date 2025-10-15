@@ -7,16 +7,19 @@ with open("background.html", "r") as f:
     background_html = f.read()
 st.markdown(background_html, unsafe_allow_html=True)
 
-# --- CUSTOM STYLES TO OVERRIDE TECHNOLOGY STACK COLOR ---
+# --- CUSTOM STYLES TO FIX TECHNOLOGY STACK ---
 st.markdown(
     """
     <style>
-      /* Target the info blocks specifically */
+      /* Restore card background for info blocks */
       .stInfo {
-        color: #ffffff !important; /* Force white text */
-        background-color: rgba(0, 0, 0, 0.2) !important; /* Slight dark overlay for contrast */
+        color: #ffffff !important; /* White text */
+        background-color: #2c3e50 !important; /* Dark card background */
+        border: 1px solid #34495e !important; /* Subtle border for card effect */
+        border-radius: 5px !important; /* Rounded corners */
+        padding: 10px !important; /* Padding inside card */
       }
-      /* Ensure Technology Stack text is white */
+      /* Ensure Technology Stack text is bold and white */
       #tech-stack-text {
         color: #ffffff !important; /* White text */
         font-weight: bold !important;
