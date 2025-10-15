@@ -116,19 +116,19 @@ for i in range(0, len(technologies), 2):  # Step by 2 to pair technologies
 
 st.markdown("---")
 # Add color fix for visibility (as discussed earlier)
-    st.markdown(
-        """
-        <style>
-        #tech-stack-text {
-            color: #00FF00; /* Green for visibility, adjust as needed */
-            font-weight: bold;
-        }
-        .stInfo {
-            color: #00FF00; /* Apply to info blocks if needed */
-        }
-        </style>
-        """,
-        unsafe_allow_html=True
-    )
+st.markdown(
+    """
+    <style>
+    #tech-stack-text {
+        color: #00FF00; /* Green for visibility, adjust as needed */
+        font-weight: bold;
+    }
+    .stInfo {
+        color: #00FF00; /* Apply to info blocks if needed */
+    }
+    </style>
+    """,
+    unsafe_allow_html=True
+)
 st.write("Created with a focus on data-driven environmental stewardship.")
 
