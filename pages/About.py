@@ -2,27 +2,6 @@ import streamlit as st
 import base64
 from pathlib import Path
 
-# --- CUSTOM STYLES TO FIX TECHNOLOGY STACK (INJECTED FIRST) ---
-st.markdown(
-    """
-    <style>
-      /* Target Technology Stack info blocks specifically */
-      [data-testid="stInfoBlock"] .stInfo {
-        color: #ffffff !important; /* Force white text */
-        background-color: #2c3e50 !important; /* Dark card background */
-        border: 1px solid #34495e !important; /* Subtle border */
-        border-radius: 5px !important; /* Rounded corners */
-        padding: 10px !important; /* Padding inside card */
-      }
-      /* Ensure all text within info blocks is white */
-      [data-testid="stInfoBlock"] .stInfo, [data-testid="stInfoBlock"] .stInfo p {
-        color: #ffffff !important; /* White text for all content */
-      }
-    </style>
-    """,
-    unsafe_allow_html=True
-)
-
 # Add interactive background
 with open("background.html", "r") as f:
     background_html = f.read()
@@ -131,9 +110,24 @@ for i in range(0, len(technologies), 2):  # Step by 2 to pair technologies
     col_idx = i // 2  # Map to column index (0 to 4)
     if col_idx < len(tech_cols):  # Ensure we don't exceed column count
         with tech_cols[col_idx]:
-            st.info(f"{technologies[i][0]}\n\n{technologies[i][1]}")
+            # Use custom markdown for card with white text and no bold
+            st.markdown(
+                f"""
+                <div style="background-color: #2c3e50; color: #ffffff; border: 1px solid #34495e; border-radius: 5px; padding: 10px;">
+                {technologies[i][0]}<br><br>{technologies[i][1]}
+                </div>
+                """,
+                unsafe_allow_html=True
+            )
             if i + 1 < len(technologies):  # Display second technology if available
-                st.info(f"{technologies[i + 1][0]}\n\n{technologies[i + 1][1]}")
+                st.markdown(
+                    f"""
+                    <div style="background-color: #2c3e50; color: #ffffff; border: 1px solid #34495e; border-radius: 5px; padding: 10px;">
+                    {technologies[i + 1][0]}<br><br>{technologies[i + 1][1]}
+                    </div>
+                    """,
+                    unsafe_allow_html=True
+                )
 
 st.markdown("---")
 st.write("Created with a focus on data-driven environmental stewardship.")
