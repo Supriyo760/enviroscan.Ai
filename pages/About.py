@@ -110,10 +110,10 @@ for i in range(0, len(technologies), 2):  # Step by 2 to pair technologies
     col_idx = i // 2  # Map to column index (0 to 4)
     if col_idx < len(tech_cols):  # Ensure we don't exceed column count
         with tech_cols[col_idx]:
-            # Use custom markdown for card with white text and no bold
+            # Use custom markdown for card with matching gradient color
             st.markdown(
                 f"""
-                <div style="color: #ffffff; border: 1px solid #34495e; border-radius: 5px; padding: 10px;">
+                <div style="background-color: #1e3a8a; color: #ffffff; border: 1px solid #34495e; border-radius: 5px; padding: 10px;">
                 {technologies[i][0]}<br><br>{technologies[i][1]}
                 </div>
                 """,
@@ -122,7 +122,7 @@ for i in range(0, len(technologies), 2):  # Step by 2 to pair technologies
             if i + 1 < len(technologies):  # Display second technology if available
                 st.markdown(
                     f"""
-                    <div style="color: #ffffff; border: 1px solid #34495e; border-radius: 5px; padding: 10px;">
+                    <div style="background-color: #1e3a8a; color: #ffffff; border: 1px solid #34495e; border-radius: 5px; padding: 10px;">
                     {technologies[i + 1][0]}<br><br>{technologies[i + 1][1]}
                     </div>
                     """,
