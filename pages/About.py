@@ -7,25 +7,6 @@ with open("background.html", "r") as f:
     background_html = f.read()
 st.markdown(background_html, unsafe_allow_html=True)
 
-# --- CUSTOM STYLES TO OVERRIDE TECHNOLOGY STACK COLOR ---
-st.markdown(
-    """
-    <style>
-      /* Target the info blocks specifically */
-      .stInfo {
-        color: #ffffff !important; /* Force white text */
-        background-color: rgba(0, 0, 0, 0.2) !important; /* Slight dark overlay for contrast */
-      }
-      /* Ensure Technology Stack text is white */
-      #tech-stack-text {
-        color: #ffffff !important; /* White text */
-        font-weight: bold !important;
-      }
-    </style>
-    """,
-    unsafe_allow_html=True
-)
-
 # --- PAGE CONFIGURATION ---
 st.set_page_config(
     page_title="About EnviroScan AI",
