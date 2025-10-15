@@ -109,7 +109,7 @@ tech_cols = st.columns([1, 1, 1, 1, 1])  # Equal width for all 5 columns
 
 # List of technologies
 technologies = [
-    (Python, "The core programming language for all backend processing."),
+    ("Python", "The core programming language for all backend processing."),
     ("Streamlit", "Used to build this interactive web application and dashboard."),
     ("Scikit-learn", "The primary library for building and evaluating our machine learning models."),
     ("Pandas", "The essential tool for data manipulation, cleaning, and analysis."),
