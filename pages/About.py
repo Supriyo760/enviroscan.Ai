@@ -110,11 +110,9 @@ for i in range(0, len(technologies), 2):  # Step by 2 to pair technologies
     col_idx = i // 2  # Map to column index (0 to 4)
     if col_idx < len(tech_cols):  # Ensure we don't exceed column count
         with tech_cols[col_idx]:
-            st.markdown(f'<div id="tech-stack-text">**{technologies[i][0]}**</div>', unsafe_allow_html=True)
-            st.write(technologies[i][1])
+            st.info(f"**{technologies[i][0]}**\n\n{technologies[i][1]}")
             if i + 1 < len(technologies):  # Display second technology if available
-                st.markdown(f'<div id="tech-stack-text">**{technologies[i + 1][0]}**</div>', unsafe_allow_html=True)
-                st.write(technologies[i + 1][1])
+                st.info(f"**{technologies[i + 1][0]}**\n\n{technologies[i + 1][1]}")
 
 st.markdown("---")
 st.write("Created with a focus on data-driven environmental stewardship.")
