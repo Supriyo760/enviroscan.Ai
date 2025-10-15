@@ -2,27 +2,31 @@ import streamlit as st
 import base64
 from pathlib import Path
 
-# Add interactive background
-with open("background.html", "r") as f:
-    background_html = f.read()
-st.markdown(background_html, unsafe_allow_html=True)
-
-# --- CUSTOM STYLES TO FIX TECHNOLOGY STACK ---
+# --- CUSTOM STYLES TO FIX TECHNOLOGY STACK (INJECTED FIRST) ---
 st.markdown(
     """
     <style>
-      /* Keep card background for info blocks */
-      .stInfo {
-        color: #ffffff !important; /* White text */
+      /* High-specificity target for info blocks */
+      div[data-testid="stInfoBlock"] .stInfo {
+        color: #ffffff !important; /* Force white text */
         background-color: #2c3e50 !important; /* Dark card background */
-        border: 1px solid #34495e !important; /* Subtle border for card effect */
+        border: 1px solid #34495e !important; /* Subtle border */
         border-radius: 5px !important; /* Rounded corners */
         padding: 10px !important; /* Padding inside card */
+      }
+      /* Ensure text inside info blocks is white */
+      div[data-testid="stInfoBlock"] .stInfo * {
+        color: #ffffff !important; /* White text for all nested elements */
       }
     </style>
     """,
     unsafe_allow_html=True
 )
+
+# Add interactive background
+with open("background.html", "r") as f:
+    background_html = f.read()
+st.markdown(background_html, unsafe_allow_html=True)
 
 # --- PAGE CONFIGURATION ---
 st.set_page_config(
