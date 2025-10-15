@@ -113,7 +113,7 @@ for i in range(0, len(technologies), 2):  # Step by 2 to pair technologies
             # Use custom markdown for card with matching gradient color
             st.markdown(
                 f"""
-                <div style="color: #ffffff; border: 1px #FFFFFF; border-radius: 5px; padding: 10px;">
+                <div style="color: #ffffff; border: 5px #FFFFFF; border-radius: 5px; padding: 10px;">
                 <h4>{technologies[i][0]}</h4>{technologies[i][1]}
                 </div>
                 """,
@@ -122,7 +122,7 @@ for i in range(0, len(technologies), 2):  # Step by 2 to pair technologies
             if i + 1 < len(technologies):  # Display second technology if available
                 st.markdown(
                     f"""
-                    <div style="color: #ffffff; border: 1px #FFFFFF; border-radius: 5px; padding: 10px;">
+                    <div style="color: #ffffff; border: 5px #FFFFFF; border-radius: 5px; padding: 10px;">
                     <h4>{technologies[i + 1][0]}</h4>{technologies[i + 1][1]}
                     </div>
                     """,
