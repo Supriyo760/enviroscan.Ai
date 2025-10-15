@@ -113,7 +113,7 @@ for i in range(0, len(technologies), 2):  # Step by 2 to pair technologies
             # Use custom markdown for card with white text and no bold
             st.markdown(
                 f"""
-                <div style="background-color: #2c3e50; color: #ffffff; border: 1px solid #34495e; border-radius: 5px; padding: 10px;">
+                <div style="color: #ffffff; border: 1px solid #34495e; border-radius: 5px; padding: 10px;">
                 {technologies[i][0]}<br><br>{technologies[i][1]}
                 </div>
                 """,
@@ -122,7 +122,7 @@ for i in range(0, len(technologies), 2):  # Step by 2 to pair technologies
             if i + 1 < len(technologies):  # Display second technology if available
                 st.markdown(
                     f"""
-                    <div style="background-color: #2c3e50; color: #ffffff; border: 1px solid #34495e; border-radius: 5px; padding: 10px;">
+                    <div style="color: #ffffff; border: 1px solid #34495e; border-radius: 5px; padding: 10px;">
                     {technologies[i + 1][0]}<br><br>{technologies[i + 1][1]}
                     </div>
                     """,
