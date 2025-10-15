@@ -7,6 +7,25 @@ with open("background.html", "r") as f:
     background_html = f.read()
 st.markdown(background_html, unsafe_allow_html=True)
 
+# --- CUSTOM STYLES TO OVERRIDE TECHNOLOGY STACK COLOR ---
+st.markdown(
+    """
+    <style>
+      /* Target the info blocks specifically */
+      .stInfo {
+        color: #ffffff !important; /* Force white text */
+        background-color: rgba(0, 0, 0, 0.2) !important; /* Slight dark overlay for contrast */
+      }
+      /* Ensure Technology Stack text is white */
+      #tech-stack-text {
+        color: #ffffff !important; /* White text */
+        font-weight: bold !important;
+      }
+    </style>
+    """,
+    unsafe_allow_html=True
+)
+
 # --- PAGE CONFIGURATION ---
 st.set_page_config(
     page_title="About EnviroScan AI",
@@ -110,10 +129,11 @@ for i in range(0, len(technologies), 2):  # Step by 2 to pair technologies
     col_idx = i // 2  # Map to column index (0 to 4)
     if col_idx < len(tech_cols):  # Ensure we don't exceed column count
         with tech_cols[col_idx]:
-            st.info(f"**{technologies[i][0]}**\n\n{technologies[i][1]}")
+            st.markdown(f'<div id="tech-stack-text">**{technologies[i][0]}**</div>', unsafe_allow_html=True)
+            st.write(technologies[i][1])
             if i + 1 < len(technologies):  # Display second technology if available
-                st.info(f"**{technologies[i + 1][0]}**\n\n{technologies[i + 1][1]}")
+                st.markdown(f'<div id="tech-stack-text">**{technologies[i + 1][0]}**</div>', unsafe_allow_html=True)
+                st.write(technologies[i + 1][1])
 
 st.markdown("---")
 st.write("Created with a focus on data-driven environmental stewardship.")
-
