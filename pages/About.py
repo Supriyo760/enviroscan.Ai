@@ -7,6 +7,23 @@ with open("background.html", "r") as f:
     background_html = f.read()
 st.markdown(background_html, unsafe_allow_html=True)
 
+# --- CUSTOM STYLES TO FIX TECHNOLOGY STACK ---
+st.markdown(
+    """
+    <style>
+      /* Keep card background for info blocks */
+      .stInfo {
+        color: #ffffff !important; /* White text */
+        background-color: #2c3e50 !important; /* Dark card background */
+        border: 1px solid #34495e !important; /* Subtle border for card effect */
+        border-radius: 5px !important; /* Rounded corners */
+        padding: 10px !important; /* Padding inside card */
+      }
+    </style>
+    """,
+    unsafe_allow_html=True
+)
+
 # --- PAGE CONFIGURATION ---
 st.set_page_config(
     page_title="About EnviroScan AI",
@@ -110,9 +127,9 @@ for i in range(0, len(technologies), 2):  # Step by 2 to pair technologies
     col_idx = i // 2  # Map to column index (0 to 4)
     if col_idx < len(tech_cols):  # Ensure we don't exceed column count
         with tech_cols[col_idx]:
-            st.info(f"**{technologies[i][0]}**\n\n{technologies[i][1]}")
+            st.info(f"{technologies[i][0]}\n\n{technologies[i][1]}")
             if i + 1 < len(technologies):  # Display second technology if available
-                st.info(f"**{technologies[i + 1][0]}**\n\n{technologies[i + 1][1]}")
+                st.info(f"{technologies[i + 1][0]}\n\n{technologies[i + 1][1]}")
 
 st.markdown("---")
 st.write("Created with a focus on data-driven environmental stewardship.")
