@@ -709,20 +709,25 @@ if submitted:
         
         interpretation = interpretation_map.get(prediction_label, interpretation_map["Mixed/Other"])
         
-        st.info(f"""
-        {interpretation['icon']} **{prediction_label} Source Analysis**
-        
-        {interpretation['description']}
-        
-        **Chemical Signature:**
-        {interpretation['chemical_signature']}
-        
-        **Key Indicators Identified:**
-        {''.join([f'• {indicator}\\n' for indicator in interpretation['key_indicators']])}
-        
-        **Recommended Mitigation Strategies:**
-        {interpretation['mitigation']}
-        """)
+        st.markdown(
+            f"""
+            <div style="color: #ffffff; border: 1px solid rgba(250, 250, 250, 0.2); border-radius: 5px; padding: 10px;">
+            {interpretation['icon']} {prediction_label} Source Analysis
+            
+            {interpretation['description']}
+            
+            Chemical Signature:
+            {interpretation['chemical_signature']}
+            
+            Key Indicators Identified:
+            {''.join([f'• {indicator}<br>' for indicator in interpretation['key_indicators']])}
+            
+            Recommended Mitigation Strategies:
+            {interpretation['mitigation']}
+            </div>
+            """,
+            unsafe_allow_html=True
+        )
     
     with res_col2:
         st.subheader("📈 Confidence Distribution")
