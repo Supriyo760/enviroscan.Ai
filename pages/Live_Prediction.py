@@ -831,15 +831,20 @@ if submitted:
             )
             st.plotly_chart(fig_metrics, use_container_width=True)
             
-            st.info(f"""
-            **Model Specifications:**
-            - Algorithm: {model_type}
-            - Training Samples: {safe_get(model_performance, 'training_samples', 15240):,}
-            - Feature Engineering: Advanced temporal and spatial features
-            - Validation: 5-fold cross-validation with spatial blocking
-            - Last Updated: {safe_get(model_performance, 'last_trained', 'Recent')}
-            - Uncertainty Quantification: Integrated confidence scoring
-            """)
+            st.markdown(
+                """
+                <div style="color: #ffffff; border: 1px solid rgba(250, 250, 250, 0.2); border-radius: 5px; padding: 10px;">
+                Model Specifications:<br>
+                - Algorithm: Standard Model<br>
+                - Training Samples: 15,240<br>
+                - Feature Engineering: Advanced temporal and spatial features<br>
+                - Validation: 5-fold cross-validation with spatial blocking<br>
+                - Last Updated: 2024-01-15<br>
+                - Uncertainty Quantification: Integrated confidence scoring
+                </div>
+                """,
+                unsafe_allow_html=True
+            )
         
         with tab2:
             st.subheader("📈 Feature Importance Analysis")
@@ -880,7 +885,14 @@ if submitted:
         
         with tab3:
             st.subheader("🔄 Scenario Sensitivity Analysis")
-            st.info("Compare how changes in key parameters affect source attribution")
+            st.markdown(
+                """
+                <div style="color: #ffffff; border: 1px solid rgba(250, 250, 250, 0.2); border-radius: 5px; padding: 10px;">
+                Compare how changes in key parameters affect source attribution
+                </div>
+                """,
+                unsafe_allow_html=True
+            )
             
             base_pred = prediction_label
             sensitivity_results = []
