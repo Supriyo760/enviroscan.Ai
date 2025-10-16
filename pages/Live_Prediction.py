@@ -716,13 +716,13 @@ if submitted:
             
             {interpretation['description']}
             
-            Chemical Signature:
+            Chemical Signature:<br>
             {interpretation['chemical_signature']}
             
-            Key Indicators Identified:
+            Key Indicators Identified:<br>
             {''.join([f'• {indicator}<br>' for indicator in interpretation['key_indicators']])}
             
-            Recommended Mitigation Strategies:
+            Recommended Mitigation Strategies:<br>
             {interpretation['mitigation']}
             </div>
             """,
