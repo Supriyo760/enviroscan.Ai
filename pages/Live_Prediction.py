@@ -534,13 +534,18 @@ with st.form("enhanced_prediction_form"):
         
         col_context1, col_context2 = st.columns(2)
         with col_context1:
-            st.info("""
-            **Real-world Concentration Ranges:**
-            - PM₂.₅: 5-500 µg/m³
-            - NO₂: 10-500 ppb
-            - O₃: 20-300 ppb
-            - SO₂: 5-1000 ppb
-            """)
+            st.markdown(
+                """
+                <div style="background-color: #1e3a8a; color: #ffffff; border: 1px solid #34495e; border-radius: 5px; padding: 10px;">
+                **Real-world Concentration Ranges:**<br>
+                - PM₂.₅: 5-500 µg/m³<br>
+                - NO₂: 10-500 ppb<br>
+                - O₃: 20-300 ppb<br>
+                - SO₂: 5-1000 ppb
+                </div>
+                """,
+                unsafe_allow_html=True
+            )
         
         with col_context2:
             st.info("""
