@@ -500,7 +500,14 @@ with st.form("enhanced_prediction_form"):
     
     # Enhanced Land Use Parameters
     st.subheader("🏙️ Land Use & Source Distribution")
-    st.info("Source density values represent normalized spatial distribution (0 = none, 1 = maximum density)")
+    st.markdown(
+        """
+        <div style="background-color: #1e3a8a; color: #ffffff; border: 1px solid #34495e; border-radius: 5px; padding: 10px;">
+        Source density values represent normalized spatial distribution (0 = none, 1 = maximum density)
+        </div>
+        """,
+        unsafe_allow_html=True
+    )
     
     col_land1, col_land2, col_land3, col_land4 = st.columns(4)
     
