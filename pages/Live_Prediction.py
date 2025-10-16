@@ -503,7 +503,7 @@ with st.form("enhanced_prediction_form"):
     st.markdown(
         """
         <div style="color: #ffffff">
-        <h2>Source density values represent normalized spatial distribution (0 = none, 1 = maximum density)</h2>
+        Source density values represent normalized spatial distribution (0 = none, 1 = maximum density)
         </div>
         """,
         unsafe_allow_html=True
