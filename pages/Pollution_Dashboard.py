@@ -661,7 +661,14 @@ with tab4:
                 height=400
             )
         else:
-            st.info("No events meet the selected severity threshold.")
+            st.markdown(
+                """
+                <div style="color: #ffffff; border: 1px solid rgba(250, 250, 250, 0.2); border-radius: 5px; padding: 10px;">
+                No events meet the selected severity threshold.
+                </div>
+                """,
+                unsafe_allow_html=True
+            )          
     
     # Statistical summary
     st.subheader("Statistical Summary")
@@ -680,13 +687,18 @@ with tab4:
     col_dl1, col_dl2 = st.columns(2)
     
     with col_dl1:
-        st.info("""
-        **Export Options:**
-        - Full filtered dataset (CSV)
-        - Statistical summary (CSV)
-        - Top pollution events (CSV)
-        """)
-    
+        st.markdown(
+                """
+                <div style="color: #ffffff; border: 1px solid rgba(250, 250, 250, 0.2); border-radius: 5px; padding: 10px;">
+                Export Options:<br>
+                - Full filtered dataset (CSV)<br>
+                - Statistical summary (CSV)<br>
+                - Top pollution events (CSV)<br>
+                </div>
+                """,
+                unsafe_allow_html=True
+            )
+        
     with col_dl2:
         @st.cache_data
         def convert_df_to_csv(df_to_convert):
