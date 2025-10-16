@@ -1015,10 +1015,10 @@ with st.sidebar:
     
     st.markdown("""
     **For Accurate Results:**
-    1. Use realistic parameter combinations
-    2. Consider seasonal/temporal patterns
-    3. Review confidence scores
-    4. Check data quality warnings
+    1. Using realistic parameter combinations
+    2. Considering seasonal/temporal patterns
+    3. Checking confidence scores
+    4. Checking data quality warnings
     
     **Interpretation Tips:**
     - High confidence (>80%): Reliable prediction
