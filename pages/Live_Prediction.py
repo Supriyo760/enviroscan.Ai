@@ -536,8 +536,8 @@ with st.form("enhanced_prediction_form"):
         with col_context1:
             st.markdown(
                 """
-                <div style="background-color: #1e3a8a; color: #ffffff; border: 1px solid #34495e; border-radius: 5px; padding: 10px;">
-                **Real-world Concentration Ranges:**<br>
+                <div style="color: #ffffff; border: 1px solid rgba(250, 250, 250, 0.2); border-radius: 5px; padding: 10px;">
+                Real-world Concentration Ranges:<br>
                 - PM₂.₅: 5-500 µg/m³<br>
                 - NO₂: 10-500 ppb<br>
                 - O₃: 20-300 ppb<br>
@@ -548,13 +548,18 @@ with st.form("enhanced_prediction_form"):
             )
         
         with col_context2:
-            st.info("""
-            **Health Guidelines (WHO):**
-            - PM₂.₅: 5 µg/m³ (annual)
-            - NO₂: 25 µg/m³ (annual)
-            - O₃: 100 µg/m³ (8h)
-            - SO₂: 40 µg/m³ (24h)
-            """)
+            st.markdown(
+                """
+                <div style="color: #ffffff; border: 1px solid rgba(250, 250, 250, 0.2); border-radius: 5px; padding: 10px;">
+                Health Guidelines (WHO):<br>
+                - PM₂.₅: 5 µg/m³ (annual)<br>
+                - NO₂: 25 µg/m³ (annual)<br>
+                - O₃: 100 µg/m³ (8h)<br>
+                - SO₂: 40 µg/m³ (24h)
+                </div>
+                """,
+                unsafe_allow_html=True
+            )
         
         st.markdown("**Normalized Scale (0-1) representing typical observed ranges**")
         
