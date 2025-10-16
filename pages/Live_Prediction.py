@@ -502,7 +502,7 @@ with st.form("enhanced_prediction_form"):
     st.subheader("🏙️ Land Use & Source Distribution")
     st.markdown(
         """
-        <div style="background-color: #1e3a8a; color: #ffffff; border: 1px solid #34495e; border-radius: 5px; padding: 10px;">
+        <div style="color: #ffffff; border: 1px solid #34495e; border-radius: 5px; padding: 10px;">
         Source density values represent normalized spatial distribution (0 = none, 1 = maximum density)
         </div>
         """,
