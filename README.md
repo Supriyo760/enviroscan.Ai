@@ -7,7 +7,11 @@ EnviroScan AI is a proof-of-concept platform that demonstrates the power of mach
 Check out the deployed app here:  
 [EnviroScan AI Web App](https://enviroscanai-kche9zywaakhvqwrcgcezc.streamlit.app/)
 
-https://github.com/user-attachments/assets/30c5482f-16c8-4f9c-a8fa-889405bcdefc
+https://github.com/user-attachments/assets/4851c79d-62fb-4e3b-a90c-d88e19663952
+
+
+
+
 
 
 
