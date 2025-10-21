@@ -113,7 +113,7 @@ for i in range(0, len(technologies), 2):  # Step by 2 to pair technologies
             # Uniform card size with fixed height and width
             st.markdown(
                 f"""
-                <div style="background-color: #1e3a8a; color: #ffffff; border: 1px solid #34495e; border-radius: 5px; padding: 10px; min-height: 150px; max-height: 150px; width: 100%; overflow-y: auto; box-sizing: border-box;">
+                <div style="color: #ffffff; border: 1px solid rgba(250, 250, 250, 0.2); border-radius: 5px; padding: 10px; min-height: 150px; max-height: 150px; width: 100%; overflow-y: auto; box-sizing: border-box;">
                 {technologies[i][0]}<br><br>{technologies[i][1]}
                 </div>
                 """,
@@ -122,7 +122,7 @@ for i in range(0, len(technologies), 2):  # Step by 2 to pair technologies
             if i + 1 < len(technologies):  # Display second technology if available
                 st.markdown(
                     f"""
-                    <div style="background-color: #1e3a8a; color: #ffffff; border: 1px solid #34495e; border-radius: 5px; padding: 10px; min-height: 150px; max-height: 150px; width: 100%; overflow-y: auto; box-sizing: border-box;">
+                    <div style="color: #ffffff; border: 1px solid rgba(250, 250, 250, 0.2); border-radius: 5px; padding: 10px; min-height: 150px; max-height: 150px; width: 100%; overflow-y: auto; box-sizing: border-box;">
                     {technologies[i + 1][0]}<br><br>{technologies[i + 1][1]}
                     </div>
                     """,
