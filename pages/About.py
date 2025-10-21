@@ -114,7 +114,7 @@ for i in range(0, len(technologies), 2):  # Step by 2 to pair technologies
             st.markdown(
                 f"""
                 <div style="color: #ffffff; border: 1px solid rgba(250, 250, 250, 0.2); border-radius: 5px; padding: 10px; min-height: 150px; max-height: 150px; width: 100%; overflow-y: auto; box-sizing: border-box;">
-                <h4>{technologies[i][0]}</h4>{technologies[i][1]}
+                <h6>{technologies[i][0]}</h6>{technologies[i][1]}
                 </div>
                 """,
                 unsafe_allow_html=True
@@ -123,7 +123,7 @@ for i in range(0, len(technologies), 2):  # Step by 2 to pair technologies
                 st.markdown(
                     f"""
                     <div style="color: #ffffff; border: 1px solid rgba(250, 250, 250, 0.2); border-radius: 5px; padding: 10px; min-height: 150px; max-height: 150px; width: 100%; overflow-y: auto; box-sizing: border-box;">
-                    <h4>{technologies[i + 1][0]},/h4>{technologies[i + 1][1]}
+                    <h6>{technologies[i + 1][0]}</h6>{technologies[i + 1][1]}
                     </div>
                     """,
                     unsafe_allow_html=True
