@@ -8,6 +8,7 @@ matplotlib
 python-dotenv 
 streamlit 
 streamlit-folium 
-folium plotly 
+folium 
+plotly 
 xgboost 
 python-pptx
