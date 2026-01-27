@@ -1,5 +1,3 @@
-altair==5.4.1
-streamlit==1.41.0
 pandas 
 requests 
 osmnx 
@@ -8,6 +6,7 @@ joblib
 seaborn 
 matplotlib 
 python-dotenv 
+streamlit 
 streamlit-folium 
 folium 
 plotly 
