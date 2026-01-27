@@ -2,10 +2,7 @@ import streamlit as st
 import base64
 from pathlib import Path
 
-# Add interactive background
-with open("background.html", "r") as f:
-    background_html = f.read()
-st.markdown(background_html, unsafe_allow_html=True)
+
 
 # --- PAGE CONFIGURATION ---
 st.set_page_config(
@@ -13,6 +10,10 @@ st.set_page_config(
     page_icon="ℹ️",
     layout="wide",
 )
+# Add interactive background
+with open("background.html", "r") as f:
+    background_html = f.read()
+st.markdown(background_html, unsafe_allow_html=True)
 
 # --- HELPER FUNCTION TO READ & ENCODE IMAGE ---
 def img_to_bytes(img_path):
