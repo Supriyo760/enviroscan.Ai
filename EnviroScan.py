@@ -2,6 +2,14 @@ import streamlit as st
 import pandas as pd
 import os
 
+# --- PAGE CONFIGURATION ---
+st.set_page_config(
+    page_title="EnviroScan AI - Home",
+    page_icon="💨",
+    layout="wide",
+    initial_sidebar_state="expanded",
+)
+
 # Inject CSS for sidebar scrollbar
 st.markdown(
     """
@@ -21,13 +29,7 @@ with open("background.html", "r") as f:
     background_html = f.read()
 st.markdown(background_html, unsafe_allow_html=True)
 
-# --- PAGE CONFIGURATION ---
-st.set_page_config(
-    page_title="EnviroScan AI - Home",
-    page_icon="💨",
-    layout="wide",
-    initial_sidebar_state="expanded",
-)
+
 
 # --- HEADER SECTION ---
 with st.container():
