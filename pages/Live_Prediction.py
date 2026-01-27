@@ -14,10 +14,7 @@ import warnings
 from pptx import Presentation
 warnings.filterwarnings('ignore')
 
-# Add interactive background
-with open("background.html", "r") as f:
-    background_html = f.read()
-st.markdown(background_html, unsafe_allow_html=True)
+
 
 # --- PAGE CONFIGURATION ---
 st.set_page_config(
@@ -26,6 +23,10 @@ st.set_page_config(
     layout="wide",
     initial_sidebar_state="expanded"
 )
+# Add interactive background
+with open("background.html", "r") as f:
+    background_html = f.read()
+st.markdown(background_html, unsafe_allow_html=True)
 
 # --- ENHANCED FILE PATHS WITH FALLBACKS ---
 OUTPUT_DIR = "outputs"
